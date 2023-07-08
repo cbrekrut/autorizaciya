@@ -7,6 +7,7 @@
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QSqlTableModel>
+#include "secondwindow.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -24,10 +25,12 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+    void on_pushButton_2_clicked();
+
 private:
+    SecondWindow *window;
     Ui::MainWindow *ui;
     QSqlDatabase bd;
     QSqlQuery *query;
-    QSqlTableModel *model;
 };
 #endif // MAINWINDOW_H
